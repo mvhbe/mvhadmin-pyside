@@ -23,7 +23,7 @@ class BrowserWidget(QWidget):
 
     def maakToolBar(self):
         self.toolBar = QToolBar()
-        self.toolBar.setToolButtonStyle = QtCore.Qt.ToolButtonTextBesideIcon
+        self.toolBar.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
         self.maakNieuwRecordAction()
         self.toolBar.addAction(self.nieuwRecordAction)
         self.layout.addWidget(self.toolBar)

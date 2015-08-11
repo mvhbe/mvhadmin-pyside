@@ -1,6 +1,6 @@
 import unittest
 from PySide import QtGui
-from browserwidget import BrowserWidget
+from browserwidget import  BrowserWidget
 
 
 class TestBrowserWidget(unittest.TestCase):
