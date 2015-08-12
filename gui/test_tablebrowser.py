@@ -3,6 +3,7 @@ import unittest
 from PySide.QtGui import QAction
 from PySide.QtGui import QApplication
 from PySide.QtGui import QToolBar
+from PySide.QtGui import QStatusBar
 
 from tablebrowser import  TableBrowser
 
@@ -26,6 +27,14 @@ class TestTableBrowser(unittest.TestCase):
         self.assertTrue(toolBarAanwezig)
         self.assertIsInstance(
             self.browser.toolBar, QToolBar, "niet van het type 'QToolBar' !"
+        )
+
+    def testHeeftStatusBar(self):
+        """Heeft een attribuut mainStatusBar van het type QStatusBar"""
+        statusBarAanwezig = hasattr(self.browser, "mainStatusBar")
+        self.assertTrue(statusBarAanwezig)
+        self.assertIsInstance(
+            self.browser.mainStatusBar, QStatusBar, "niet van het type 'QStatusBar' !"
         )
 
     def testHeeftActieNiewRecord(self):
